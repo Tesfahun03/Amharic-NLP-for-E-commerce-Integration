@@ -7,6 +7,15 @@ sys.path.append(os.path.abspath('..'))
 
 
 def data_labeler():
+    """Labels tokens in a text file with predefined categories and saves the labeled data to a CSV file.
+    The function reads tokens from a text file, labels them based on predefined categories (Product, PRICE, LOC),
+    and saves the labeled tokens to a CSV file.
+    The predefined categories and their corresponding keywords are:
+        - Product: ['የፀጉር', 'እስቲመር', 'ጭን', 'ትሪትመንት', 'ጸጉር', 'ፖፖ', 'የልጆች', 'ምግብ', 'መፍጫ', 'ቦል']
+        - PRICE: ['ብር', '800', 'ዋጋ', '1200', '400', '4500', '1000']
+        - LOC: ['ቁ1መገናኛ', 'ፒያሳ', 'ገርጂ', '4ኪሎ', 'ቅድስት', 'ስላሴ', 'ህንፃ', 'ኢምፔሪያል', 'ከሳሚ', 'ጊዮርጊስ', 'አደባባይ', 'ራመት_ታቦር_ኦዳ_ህንፃ']
+        None
+    """
     # Load data from the text file
     with open('../data/tokens.txt', 'r', encoding='utf-8') as file:
         lines = file.readlines()
